@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Handlee;
+    color: #28385e;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #faf3dd;
+}
+
+/* Header */
+header {
+    background-color: #eebb55;
+    padding: 10px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.home-header {
+    margin-left: 685px;
+    font-weight: bold;
+}
+
+/* Matching Cards Game */
+.matching-game {
+    display: flex;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 450px;
+    margin: 50px auto;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: calc(25% - 10px);
+    height: calc(33% - 10px);
+    margin: 5px;
+    transform: scale(1);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card:active {
+    transition: transform .2s;
+    transform: scale(0.95);
+}
+
+.front-face, .back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #6d3939;
+    border-radius: 10px;
+    box-shadow: 5px 5px 1px #f8da5b;
+
+}
+
+.card-name {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #2794eb;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    margin-top: 108px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.front-face, .card-name {
+    transform: rotateY(180deg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #eebb55;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+/* Restart Button */
+#restart {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #eebb55;
+    width: 8%;
+    margin-top: 30px;
+    border-radius: 8%;
+    border-style: outset;
+    box-shadow: 0 8px #d2d4d6;
+    margin-left: 46%;
+    color: #28385e;
+}
+
+#restart:active {
+    box-shadow: 0 5px black;
+    transform: translateY(7px);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
